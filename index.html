@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あなたの『生き方』は、どの偉人に重なるか</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section id="heroSection" class="card">
+      <p class="eyebrow">Waごころ寺子屋 診断アプリ</p>
+      <h1 class="hero-title">
+        <span class="hero-small">あなたの</span>
+        <span class="hero-accent">『生き方』</span>
+        <span class="hero-main">は、どの偉人に重なるか</span>
+      </h1>
+      <p class="hero-sub">上杉謙信・巴御前・新島八重・千利休・吉田松陰・武田信玄・北条政子</p>
+      <p class="hero-note">直感でお選びください</p>
+      <p class="hero-note second">答えではなく、これまでの在り方があらわれます</p>
+
+      <form id="profileForm" class="profile-form">
+        <label class="field">
+          <span>お名前（ニックネーム可）<strong>必須</strong></span>
+          <input id="userName" name="userName" type="text" placeholder="例：花伎" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>メールアドレス <em>任意</em></span>
+          <input id="email" name="email" type="email" placeholder="例：sample@example.com" autocomplete="email" />
+        </label>
+        <button type="submit" class="primary-btn start-btn">診断をはじめる</button>
+      </form>
+    </section>
+
+    <section id="quizSection" class="card hidden">
+      <div class="progress-wrap">
+        <span id="progressText" class="progress-text">1 / 7</span>
+        <div class="progress-bar-bg">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <h2 id="questionTitle" class="question-title"></h2>
+      <p id="questionLead" class="question-lead"></p>
+      <div id="optionsContainer" class="options"></div>
+
+      <div class="quiz-actions">
+        <button id="backButton" type="button" class="secondary-btn back-btn">ひとつ戻る</button>
+      </div>
+    </section>
+
+    <section id="resultSection" class="card hidden">
+      <p class="section-label">診断結果</p>
+
+      <div id="resultHeroArea">
+        <h2 id="resultHeading" class="result-heading"></h2>
+        <p id="resultSummary" class="result-summary"></p>
+
+        <div class="info-box">
+          <h3 id="figureName" class="box-title"></h3>
+          <p id="figureDescription"></p>
+        </div>
+
+        <div class="info-box">
+          <h3 class="box-title">七徳のバランス</h3>
+          <div id="virtueScores" class="virtue-scores"></div>
+        </div>
+
+        <button id="commentToggle" type="button" class="secondary-btn">寺子屋からのひとことを見る</button>
+        <div id="commentBox" class="info-box hidden"></div>
+
+        <button id="figuresToggle" type="button" class="secondary-btn">ほかの偉人も見る</button>
+        <div id="figuresBox" class="info-box hidden"></div>
+      </div>
+
+      <div id="notReachedArea" class="hidden">
+        <h2 class="result-heading">今回はまだ、偉人の在り方には届いていないようです</h2>
+        <p class="result-summary">日々の在り方を、少しずつ整えてみてください。</p>
+
+        <button id="notReachedCommentToggle" type="button" class="secondary-btn">寺子屋からのひとことを見る</button>
+        <div id="notReachedCommentBox" class="info-box hidden"></div>
+      </div>
+
+      <div class="closing-copy">
+        <p>和の文化は、<br>ひとつではなく「輪」としてつながっています</p>
+        <p>Waごころ寺子屋では、<br>その入口として、さまざまな文化をご紹介しています</p>
+        <p>このような小さな体験からでも、<br>何か感じていただけましたら幸いです</p>
+        <p>Waごころ寺子屋では、<br>このような試み（『生き方』は、どの偉人に重なるか診断）も含め、<br>和の文化を今の時代に合わせてお伝えしております</p>
+        <p>もし何か感じるものがありましたら、<br>どうぞ、そっとのぞいてみてください</p>
+      </div>
+
+      <div class="result-actions">
+        <a id="jpLink" class="primary-btn" href="#" target="_blank" rel="noopener noreferrer">Waごころ寺子屋とは？</a>
+      </div>
+
+      <div class="signature">
+        <p>Waごころ寺子屋 管理人</p>
+        <p>日本舞踊家 花伎稀世花</p>
+      </div>
+
+      <div class="restart-wrap">
+        <button id="restartButton" type="button" class="secondary-btn">もう一度診断する</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
